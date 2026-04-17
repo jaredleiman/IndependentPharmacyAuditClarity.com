@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://independentpharmacyauditclarity.com/sitemap.xml
