@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog &mdash; Independent Pharmacy Audit Clarity</title>
+<meta name="description" content="Deep-dive articles on PBM audit triggers, DIR fee mechanics, clawbacks, and the 2026 enforcement environment for independent pharmacies.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://independentpharmacyauditclarity.com/blog/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog &mdash; Independent Pharmacy Audit Clarity">
+<meta property="og:description" content="Deep-dive articles on PBM audit triggers, DIR fee mechanics, clawbacks, and the 2026 enforcement environment for independent pharmacies.">
+<meta property="og:url" content="https://independentpharmacyauditclarity.com/blog/">
+
+<style>
+  :root {
+    --navy: #002147;
+    --navy-deep: #000a1e;
+    --amber: #775a19;
+    --amber-light: #c49a28;
+    --cream: #f9f6f0;
+    --text: #1a1a2e;
+    --muted: #5a5a7a;
+    --border: #ddd8cc;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+
+  nav { background: var(--navy-deep); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .logo { color: #fff; font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+  .logo span { color: var(--amber-light); font-weight: 400; font-size: 0.85rem; display: block; }
+  .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,0.8); font-size: 0.9rem; font-family: system-ui, sans-serif; }
+  .nav-links a:hover { color: #fff; }
+  .nav-cta { background: var(--amber-light); color: #fff !important; padding: 0.45rem 1rem; border-radius: 4px; font-weight: 600; }
+
+  .page-header { background: var(--navy); color: #fff; padding: 4rem 2rem 3rem; text-align: center; }
+  .page-header .eyebrow { font-family: system-ui, sans-serif; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber-light); margin-bottom: 1rem; }
+  .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.2; margin-bottom: 1rem; }
+  .page-header p { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto; }
+
+  .blog-listing { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+  .blog-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; transition: box-shadow 0.2s, transform 0.2s; }
+  .blog-card:hover { box-shadow: 0 6px 24px rgba(0,33,71,0.1); transform: translateY(-2px); }
+  .blog-meta { display: flex; align-items: center; gap: 0.5rem; font-family: system-ui, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .divider { width: 3px; height: 3px; background: var(--muted); border-radius: 50%; }
+  .blog-title { font-size: 1.1rem; line-height: 1.35; color: var(--navy); }
+  .blog-excerpt { font-size: 0.92rem; color: var(--muted); line-height: 1.6; flex: 1; }
+  .blog-readmore { font-family: system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--amber); margin-top: auto; }
+  .badge-new { display: inline-block; background: var(--amber-light); color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 3px; margin-bottom: 0.25rem; }
+
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.6); padding: 3rem 2rem 2rem; font-family: system-ui, sans-serif; font-size: 0.85rem; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-disclaimer { border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 2rem; font-size: 0.8rem; line-height: 1.6; }
+  .footer-brand { color: #fff; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .footer-brand span { color: var(--amber-light); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem; padding-top: 1.5rem; text-align: center; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Independent Pharmacy<br><span>Audit Clarity</span></a>
+    <div class="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Resources</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#pricing" class="nav-cta">Start subscription</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="eyebrow">Resources for independent pharmacies</div>
+  <h1>Recent <em>analysis</em> from our briefings.</h1>
+  <p>Deep-dive articles on PBM provider manual clauses, audit triggers, DIR fee mechanics, and the 2026 enforcement environment. Free to read. No subscription required.</p>
+</div>
+
+<div class="blog-listing">
+  <div class="blog-grid">
+
+    <a href="/blog/ai-pbm-audit-clawbacks/" class="blog-card">
+      <div class="badge-new">New &mdash; April 2026</div>
+      <div class="blog-meta">
+        <span>AI Audits</span>
+        <span class="divider"></span>
+        <span class="time">12 min read</span>
+      </div>
+      <h3 class="blog-title">PBM Audits in 2026: How AI Is Driving Pharmacy Clawbacks and What to Do About It</h3>
+      <p class="blog-excerpt">PBMs are using AI to audit independent pharmacies and recover already-paid claims. Here&rsquo;s how the new audit mechanics work and how to protect your pharmacy.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/pbm-ai-audits-independent-pharmacy-2026/" class="blog-card">
+      <div class="blog-meta">
+        <span>AI &amp; Audits</span>
+        <span class="divider"></span>
+        <span class="time">14 min read</span>
+      </div>
+      <h3 class="blog-title">PBM AI Audits and Independent Pharmacies: What the 2026 Audit Surge Means for Your Practice</h3>
+      <p class="blog-excerpt">PBMs are deploying AI audit systems that are hitting independent pharmacies harder than ever. Here is what changed, what triggers the new systems, and how to respond before the clawback letter arrives.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/ndc-discrepancy-audits-explained" class="blog-card">
+      <div class="blog-meta">
+        <span>Audit Patterns</span>
+        <span class="divider"></span>
+        <span class="time">8 min read</span>
+      </div>
+      <h3 class="blog-title">NDC discrepancies: why your wholesaler substitution is not &ldquo;fraud&rdquo;</h3>
+      <p class="blog-excerpt">PBMs increasingly flag wholesaler-driven NDC swaps as overpayments. Here is exactly what documentation each major PBM requires to overturn the finding.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/dir-fee-clawback-mechanics" class="blog-card">
+      <div class="blog-meta">
+        <span>DIR Fees</span>
+        <span class="divider"></span>
+        <span class="time">12 min read</span>
+      </div>
+      <h3 class="blog-title">How DIR fees actually work &mdash; and where the 9% clawback figure comes from</h3>
+      <p class="blog-excerpt">A structural breakdown of performance-based DIR assessment, Star Rating misapplication, and the 2022 CMS point-of-sale reforms that PBMs have quietly worked around.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/drug-invoice-shortage-dis" class="blog-card">
+      <div class="blog-meta">
+        <span>Documentation</span>
+        <span class="divider"></span>
+        <span class="time">7 min read</span>
+      </div>
+      <h3 class="blog-title">Drug invoice shortage findings: the 30-day window most pharmacies miss</h3>
+      <p class="blog-excerpt">The documentation review period PBMs use is narrower than most independents assume. Here is how to build a purchase history record that actually survives audit.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/pbm-network-termination-cascade" class="blog-card">
+      <div class="blog-meta">
+        <span>Enforcement</span>
+        <span class="divider"></span>
+        <span class="time">10 min read</span>
+      </div>
+      <h3 class="blog-title">Why one small audit finding can cascade across every PBM network</h3>
+      <p class="blog-excerpt">PBMs share audit outcomes. A $400 clawback at one can become network termination at three. The clause architecture that makes this possible, and how to spot it in your contracts.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/dscsa-transaction-records" class="blog-card">
+      <div class="blog-meta">
+        <span>DSCSA</span>
+        <span class="divider"></span>
+        <span class="time">9 min read</span>
+      </div>
+      <h3 class="blog-title">DSCSA transaction records: what pharmacy-to-pharmacy purchases actually require</h3>
+      <p class="blog-excerpt">Purchase summaries from licensed wholesalers are not equivalent to transaction records under DSCSA. Here is the exact documentation chain each auditor expects you to maintain all three.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/optum-rx-audit-triggers-2026" class="blog-card">
+      <div class="blog-meta">
+        <span>Optum Rx</span>
+        <span class="divider"></span>
+        <span class="time">11 min read</span>
+      </div>
+      <h3 class="blog-title">The five Optum Rx audit triggers independents saw most in 2025</h3>
+      <p class="blog-excerpt">Based on client audit notices across independent pharmacies: the specific claim patterns, high-cost drug thresholds, and prescriber verification gaps that Optum Rx flagged most aggressively.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/what-is-a-pbm-pharmacy-owner-guide" class="blog-card">
+      <div class="blog-meta">
+        <span>Fundamentals</span>
+        <span class="divider"></span>
+        <span class="time">8 min read</span>
+      </div>
+      <h3 class="blog-title">What is a PBM? A pharmacy owner&rsquo;s guide to the middlemen controlling your reimbursements</h3>
+      <p class="blog-excerpt">A plain-English breakdown of how pharmacy benefit managers work, what they control, and why their audit authority over your pharmacy is broader than most owners realize.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/what-are-dir-fees-definition-mechanics" class="blog-card">
+      <div class="blog-meta">
+        <span>DIR Fees</span>
+        <span class="divider"></span>
+        <span class="time">9 min read</span>
+      </div>
+      <h3 class="blog-title">What are DIR fees? Definition, mechanics, and what independents need to know in 2026</h3>
+      <p class="blog-excerpt">Direct and Indirect Remuneration fees are the single largest source of post-payment clawbacks for independent pharmacies. Here is how they are calculated and what you can do about them.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/mac-appeal-process-independent-pharmacy" class="blog-card">
+      <div class="blog-meta">
+        <span>MAC Appeals</span>
+        <span class="divider"></span>
+        <span class="time">10 min read</span>
+      </div>
+      <h3 class="blog-title">The MAC appeal process for independent pharmacies: timelines, evidence, and what actually works</h3>
+      <p class="blog-excerpt">Maximum Allowable Cost appeals have strict procedural requirements that most pharmacies miss. Here is a step-by-step breakdown of what each major PBM requires and the evidence that moves the needle.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+    <a href="/blog/pharmacy-audit-assistance-service-paas" class="blog-card">
+      <div class="blog-meta">
+        <span>Audit Defense</span>
+        <span class="divider"></span>
+        <span class="time">7 min read</span>
+      </div>
+      <h3 class="blog-title">Pharmacy Audit Assistance Service (PAAS): what it covers and where independent pharmacies still need help</h3>
+      <p class="blog-excerpt">PAAS provides valuable resources for audit prep, but its scope has limits most independent pharmacy owners do not discover until they are already under review.</p>
+      <div class="blog-readmore">Read article &rarr;</div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-disclaimer">
+      <strong style="color: rgba(255,255,255,0.85);">Educational purposes only.</strong> Independent Pharmacy Audit Clarity provides educational and translational services only. We do not provide legal representation, audit defense, or advice regarding how to respond to specific PBM proceedings. Our analyses are designed to help pharmacy owners understand the content and requirements of documents they receive. For legal representation in PBM audit matters, federal investigations, or network termination proceedings, consult a licensed healthcare attorney.
+    </div>
+    <div class="footer-brand">Independent Pharmacy <span>Audit Clarity</span></div>
+    <p style="color:rgba(255,255,255,0.55); font-size:0.82rem; margin-top:0.5rem; max-width:500px;">Plain-English translation of PBM audit notices, DIR statements, and provider manual requirements for the 19,000 independent pharmacies navigating the 2026 enforcement climate.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brahka Labs &middot; Independent Pharmacy Audit Clarity</p>
+      <p>Built for independents. Operated from Indiana.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
